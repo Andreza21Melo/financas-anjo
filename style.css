@@ -100,3 +100,30 @@ li{
   padding:10px 0;
   border-bottom:1px solid #eee;
 }
+
+.entrada-container{
+  display:flex;
+  align-items:center;
+  background:white;
+  border:1px solid #ddd;
+  border-radius:30px;
+  padding:5px;
+}
+
+.entrada-container input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding:12px;
+  background:transparent;
+}
+
+.btn-enviar{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:#333;
+  color:white;
+  cursor:pointer;
+}
