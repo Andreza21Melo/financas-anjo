@@ -59,7 +59,9 @@ header p{
 .lancamento{
   max-width:700px;
   margin:0 auto 20px auto;
-  margin-bottom: 15px;
+}
+.lancamento h3{
+  margin-buttom:15px;
 }
 .historico{
   background:white;
