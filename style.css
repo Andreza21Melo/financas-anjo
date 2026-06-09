@@ -56,7 +56,11 @@ header p{
 }
 
 .grafico,
-.lancamento,
+.lancamento{
+  max-width:700px;
+  margin:0 auto 20px auto;
+  margin-bottom: 15px;
+}
 .historico{
   background:white;
   padding:20px;
