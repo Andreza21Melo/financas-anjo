@@ -29,6 +29,12 @@ header p{
   color:#777;
 }
 
+#mesAtual{
+  color: #777;
+  margin-top: 5px;
+  front-size: 0.95rem;
+}
+
 .saldo-card{
   background:white;
   padding:25px;
