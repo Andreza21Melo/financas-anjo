@@ -63,9 +63,10 @@ header p{
 }
 
 .grafico,
+
 .lancamento{
-  max-width:700px;
-  margin:0 auto 20px auto;
+  max-width:500px;
+  margin:0 auto 180px auto;
 }
 .lancamento h3{
   margin-buttom:15px;
