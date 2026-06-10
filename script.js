@@ -24,6 +24,9 @@ document.getElementById("mesAtual").textContent =
 // BOTÃO DE LANÇAMENTO
 // ======================
 
+const botao=document.querySelector(".bnt-enviar");
+const entrada=document.get.ElementByld("entrada");
+
 botao.addEventListener("click", async () => {
 
   const texto = entrada.value.trim();
