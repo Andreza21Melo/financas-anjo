@@ -111,3 +111,47 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
 
   alert("✅ Lançamento salvo!");
 });
+
+// ======================
+// HISTÓRICO
+// ======================
+
+async function carregarHistorico() {
+
+  const lista = document.getElementById(
+    "lista-lancamentos"
+  );
+
+  const { data, error } = await banco
+    .from("movimentacoes")
+    .select("*")
+    .order("data", { ascending: false })
+    .limit(10);
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  lista.innerHTML = "";
+
+  if (data.length === 0) {
+
+    lista.innerHTML =
+      "<li>Nenhum lançamento registrado.</li>";
+
+    return;
+  }
+
+  data.forEach(item => {
+
+    const li = document.createElement("li");
+
+    li.textContent =
+      `${item.descricao} - R$ ${Number(item.valor).toFixed(2)}`;
+
+    lista.appendChild(li);
+
+  });
+
+}
