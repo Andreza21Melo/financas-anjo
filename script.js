@@ -43,6 +43,9 @@ const banco = window.supabase.createClient(
 const botao = document.querySelector(".btn-enviar");
 const entrada = document.getElementById("entrada");
 
+console.log("Botão encontrado:", botao);
+console.log("Entrada encontrada:", entrada);
+
 // ======================
 // TESTE DE CONEXÃO
 // ======================
