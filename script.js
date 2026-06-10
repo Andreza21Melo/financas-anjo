@@ -24,10 +24,7 @@ document.getElementById("mesAtual").textContent =
 // BOTÃO DE LANÇAMENTO
 // ======================
 
-const botao = document.querySelector(".btn-enviar");
-const entrada = document.getElementById("entrada");
-
-botao.addEventListener("click", () => {
+botao.addEventListener("click", async () => {
 
   const texto = entrada.value.trim();
 
@@ -38,14 +35,34 @@ botao.addEventListener("click", () => {
 
   const partes = texto.split(" ");
 
-  const valor = partes.pop();
+  const valor = Number(
+    partes.pop().replace(",", ".")
+  );
 
   const categoria = partes.join(" ");
 
-  alert(
-    `Categoria: ${categoria}\nValor: ${valor}`
-  );
+  const { data, error } = await banco
+    .from("movimentacoes")
+    .insert([
+      {
+        data: new Date().toISOString().split("T")[0],
+        descricao: categoria,
+        categoria: categoria,
+        valor: valor,
+        tipo: "Despesa"
+      }
+    ]);
 
+  if (error) {
+    console.error(error);
+    alert("Erro ao salvar.");
+    return;
+  }
+
+  entrada.value = "";
+  entrada.focus();
+
+  alert("✅ Lançamento salvo!");
 });
 
 // ======================
