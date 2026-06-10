@@ -96,6 +96,10 @@ botao.addEventListener("click", async () => {
       }
     ]);
 
+  console.log("URL:", SUPABASE_URL);
+console.log("Tamanho da chave:", SUPABASE_KEY.length);
+console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
+
   if (error) {
     console.error(error);
     alert(`Erro ao salvar: ${error.message}`);
