@@ -109,7 +109,8 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
 
   entrada.value = "";
   entrada.focus();
-
+  
+await carregarHistorico();
   alert("✅ Lançamento salvo!");
 });
 
