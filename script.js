@@ -29,7 +29,7 @@ document.getElementById("mesAtual").textContent =
 // ======================
 
 const SUPABASE_URL = "https://jrbtowspnnrblvyaaivw.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpyYnRvd3Nwbm5yYmx2eWFhaXZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDU4MDgsImV4cCI6MjA5NjU4MTgwOH0.W6JsYsbd9fP-RYmxP2tpcV0cfOzKIm8SLv1ljqAMHto";
+const SUPABASE_KEY = "sb_publishable_GCghynDi73890IlDoXgEUg_OyWc70A-";
 
 const banco = window.supabase.createClient(
   SUPABASE_URL,
