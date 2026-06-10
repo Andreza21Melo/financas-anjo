@@ -1,5 +1,9 @@
 console.log("Finanças AnJo iniciado 🚀");
 
+// ======================
+// MÊS ATUAL
+// ======================
+
 const meses = [
   "Janeiro",
   "Fevereiro",
@@ -21,11 +25,44 @@ document.getElementById("mesAtual").textContent =
   `${meses[hoje.getMonth()]} ${hoje.getFullYear()}`;
 
 // ======================
-// BOTÃO DE LANÇAMENTO
+// SUPABASE
 // ======================
 
-const botao=document.querySelector(".bnt-enviar");
-const entrada=document.get.ElementByld("entrada");
+const SUPABASE_URL = "https://jrbtowspnnrblvyaaivw.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpyYnRvd3Nwbm5yYmx2eWFhaXZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDU4MDgsImV4cCI6MjA5NjU";
+
+const banco = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+// ======================
+// ELEMENTOS DA TELA
+// ======================
+
+const botao = document.querySelector(".btn-enviar");
+const entrada = document.getElementById("entrada");
+
+// ======================
+// TESTE DE CONEXÃO
+// ======================
+
+async function testarConexao() {
+
+  const { data, error } = await banco
+    .from("categorias")
+    .select("*");
+
+  console.log("Dados:", data);
+  console.log("Erro:", error);
+
+}
+
+testarConexao();
+
+// ======================
+// NOVO LANÇAMENTO
+// ======================
 
 botao.addEventListener("click", async () => {
 
@@ -44,7 +81,7 @@ botao.addEventListener("click", async () => {
 
   const categoria = partes.join(" ");
 
-  const { data, error } = await banco
+  const { error } = await banco
     .from("movimentacoes")
     .insert([
       {
@@ -58,7 +95,7 @@ botao.addEventListener("click", async () => {
 
   if (error) {
     console.error(error);
-    alert("Erro ao salvar.");
+    alert(`Erro ao salvar: ${error.message}`);
     return;
   }
 
@@ -67,32 +104,3 @@ botao.addEventListener("click", async () => {
 
   alert("✅ Lançamento salvo!");
 });
-
-// ======================
-// SUPABASE
-// ======================
-
-const SUPABASE_URL = "https://jrbtowspnnrblvyaaivw.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpyYnRvd3Nwbm5yYmx2eWFhaXZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwMDU4MDgsImV4cCI6MjA5NjU4MTgwOH0.W6JsYsbd9fP-RYmxP2tpcV0cfOzKIm8SLv1ljqAMHto";
-
-const banco = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_KEY
-);
-
-// ======================
-// TESTE DE CONEXÃO
-// ======================
-
-async function testarConexao() {
-
-  const { data, error } = await banco
-    .from("categorias")
-    .select("*");
-
-  console.log("Dados:", data);
-  console.log("Erro:", error);
-
-}
-
-testarConexao();
