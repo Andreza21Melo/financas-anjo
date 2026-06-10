@@ -62,6 +62,7 @@ async function testarConexao() {
 }
 
 testarConexao();
+carregarHistorico();
 
 // ======================
 // NOVO LANÇAMENTO
