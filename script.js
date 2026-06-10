@@ -51,3 +51,16 @@ const supabase = window.supabase.createClient(
   SUPABASE_URL,
   SUPABASE_KEY
 );
+
+async function testarConexao() {
+
+  const { data, error } = await supabase
+    .from("categorias")
+    .select("*");
+
+  console.log("Dados:", data);
+  console.log("Erro:", error);
+
+}
+
+testarConexao();
