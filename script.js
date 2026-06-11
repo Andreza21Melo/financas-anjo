@@ -157,3 +157,43 @@ async function carregarHistorico() {
   });
 
 }
+
+async function carregarSaldo() {
+
+  const { data, error } = await banco
+    .from("movimentacoes")
+    .select("*");
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  let receitas = 0;
+  let despesas = 0;
+
+  data.forEach(item => {
+
+    if (item.tipo === "Receita") {
+      receitas += Number(item.valor);
+    }
+
+    if (item.tipo === "Despesa") {
+      despesas += Number(item.valor);
+    }
+
+  });
+
+  const saldo = receitas - despesas;
+
+  document.getElementById("saldo")
+    .textContent =
+    saldo.toLocaleString(
+      "pt-BR",
+      {
+        style: "currency",
+        currency: "BRL"
+      }
+    );
+
+}
