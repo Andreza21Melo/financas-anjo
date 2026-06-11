@@ -113,6 +113,8 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
 
   
 await carregarHistorico();
+await carregarSaldo();
+  
   alert("✅ Lançamento salvo!");
 });
 
