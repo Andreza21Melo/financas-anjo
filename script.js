@@ -175,6 +175,7 @@ async function carregarSaldo() {
 
   let receitas = 0;
   let despesas = 0;
+  let transferencias = 0;
 
   data.forEach(item => {
 
