@@ -317,6 +317,56 @@ const categoriasMap = {
   categoria: "Cartão de crédito",
   tipo: "Despesa"
   },
+
+   "Cinema":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "cinema":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "restaurante":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "Restaurante":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "BK":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+  
+  "bk":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+    "Almoço":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "Lanche":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+  "Pizza":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
+
+    "pizza":{
+  categoria: "Lazer",
+  tipo: "Despesa"
+  },
 };
 
 console.log("Botão encontrado:", botao);
