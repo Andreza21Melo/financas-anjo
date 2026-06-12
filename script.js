@@ -497,11 +497,26 @@ async function carregarHistorico() {
 
     const li = document.createElement("li");
 
-    li.textContent =
-      `${item.descricao} - R$ ${Number(item.valor).toFixed(2)}`;
+li.classList.add("item-historico");
 
-    lista.appendChild(li);
+li.innerHTML = `
+  <span class="historico-descricao">
+    ${item.descricao}
+  </span>
 
+  <span class="historico-valor">
+    ${Number(item.valor).toLocaleString(
+      "pt-BR",
+      {
+        style: "currency",
+        currency: "BRL"
+      }
+    )}
+  </span>
+`;
+
+lista.appendChild(li);
+    
   });
 
 }
