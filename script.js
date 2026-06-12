@@ -551,6 +551,22 @@ li.classList.add("item-historico");
     icone = "📈";
     break;
 
+ case "Renda Extra":
+    icone = "📈";
+    break;
+
+    case "Outros":
+    icone = "📦";
+    break;
+
+    case "Água":
+    icone = "🚿";
+    break;
+
+     case "Luz":
+    icone = "💡";
+    break;     
+
     }
     
 
