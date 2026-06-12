@@ -662,8 +662,10 @@ async function carregarSaldo() {
       }
     );
 
-  document.getElementById("saldo")
-    .textContent =
+  const saldoElemento =
+  document.getElementById("saldo");
+  
+  saldoElemento.textContent =
     saldo.toLocaleString(
       "pt-BR",
       {
@@ -673,7 +675,7 @@ async function carregarSaldo() {
     );
   if (saldo <0) {
     saldoElemento.style.color=
-      "c62828";
+      "#c62828";
   } else {
     saldoElemento.style.color=
       "";
