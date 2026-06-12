@@ -671,5 +671,12 @@ async function carregarSaldo() {
         currency: "BRL"
       }
     );
+  if (saldo <0) {
+    saldoElemento.style.color=
+      "c62828";
+  } else {
+    saldoElemento.style.color=
+      "";
+  }
 
 }
