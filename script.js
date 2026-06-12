@@ -367,6 +367,7 @@ const categoriasMap = {
   categoria: "Lazer",
   tipo: "Despesa"
   },
+
 };
 
 console.log("Botão encontrado:", botao);
