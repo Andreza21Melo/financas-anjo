@@ -146,4 +146,30 @@ li{
   margin-bottom:20px;
 }
 
+/* ======================
+   HISTÓRICO
+====================== */
 
+#lista-lancamentos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-historico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.historico-descricao {
+  font-weight: 500;
+}
+
+.historico-valor {
+  font-weight: 600;
+}
