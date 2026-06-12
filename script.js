@@ -43,6 +43,282 @@ const banco = window.supabase.createClient(
 const botao = document.querySelector(".btn-enviar");
 const entrada = document.getElementById("entrada");
 
+// ======================
+// CATEGORIAS INTELIGENTES
+// ======================
+
+const categoriasMap = {
+  "salario":{
+  categoria: "Salário",
+    tipo: "Receita"
+  },
+  
+  "salário":{
+  categoria: "Salário",
+    tipo: "Receita"
+  },
+
+   "renda":{
+  categoria: "Salário",
+    tipo: "Receita"
+  },
+
+     "SALARIO":{
+  categoria: "Salário",
+    tipo: "Receita"
+  },
+
+   "entrada":{
+  categoria: "Salário",
+    tipo: "Receita"
+  },
+
+   "mercado":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+  "Mercado":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+  "MERCADO":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+  "Atacadão":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+    "atacadão":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+    "atacadao":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+    "Ayumi":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+    "ayumi":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+   "Tenda":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+  "tenda":{
+  categoria: "Mercado",
+    tipo: "Despesa"
+  },
+
+   "aluguel":{
+  categoria: "Aluguel",
+    tipo: "Despesa"
+  },
+
+  "agua":{
+  categoria: "Água",
+    tipo: "Despesa"
+  },
+
+  "água":{
+  categoria: "Água",
+    tipo: "Despesa"
+  },
+
+  "Energia":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
+  "energia":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
+  "Enel":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
+   "enel":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
+  "internet":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+  "wifi":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+   "wi-fi":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+  "Wi-fi":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+  "Wifi":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+    "claro":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+    "Claro":{
+  categoria: "Internet",
+    tipo: "Despesa"
+  },
+
+  "Plano":{
+  categoria: "Internet",
+  tipo: "Despesa"
+  },
+
+  "Uber":{
+  categoria: "Transporte",
+  tipo: "Despesa"
+  },
+
+  "Remédio":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Remédios":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "remedios":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+   "remédios":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "farmacia":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+   "farmácia":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Farmácia":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Anticoncepcional":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+    "dentista":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Dentista":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Plano odontológico":{
+  categoria: "Saúde",
+  tipo: "Despesa"
+  },
+
+  "Curso":{
+  categoria: "Estudos",
+  tipo: "Despesa"
+  },
+
+  "estudos":{
+  categoria: "Estudos",
+  tipo: "Despesa"
+  },
+
+  "curso":{
+  categoria: "Estudos",
+  tipo: "Despesa"
+  },
+
+  "Alura":{
+  categoria: "Estudos",
+  tipo: "Despesa"
+  },
+
+  "Curso Alura":{
+  categoria: "Estudos",
+  tipo: "Despesa"
+  },
+
+  "Roupas":{
+  categoria: "Roupa/Calçado",
+  tipo: "Despesa"
+  },
+
+  "Shopping":{
+  categoria: "Roupa/Calçado",
+  tipo: "Despesa"
+  },
+
+  "Calça":{
+  categoria: "Roupa/Calçado",
+  tipo: "Despesa"
+  },
+
+   "cosmeticos":{
+  categoria: "Cosméticos",
+  tipo: "Despesa"
+  },
+
+  "Dívida":{
+  categoria: "Cartão de crédito",
+  tipo: "Despesa"
+  },
+
+  "Empréstimo":{
+  categoria: "Cartão de crédito",
+  tipo: "Despesa"
+  },
+
+  "Fatura":{
+  categoria: "Cartão de crédito",
+  tipo: "Despesa"
+  },
+};
+
 console.log("Botão encontrado:", botao);
 console.log("Entrada encontrada:", entrada);
 
