@@ -362,6 +362,24 @@ botao.addEventListener("click", async () => {
 
   const categoria = partes.join(" ");
 
+  const textoNormalizado =
+    categoria.toLowerCase();
+
+  const categoriaEncontada =
+    categoriasMap[textoNormalizado];
+
+  let categoriaFinal = categoria
+  let tipoFinal = "Despesas";
+
+  if (categoriaEncontrada) {
+
+    categoriaFinal =
+      categoriaEncontrada.categoria;
+
+    tipoFinal =
+      categoriaEncontrada.tipo;
+  }
+
   const { error } = await banco
     .from("movimentacoes")
     .insert([
@@ -370,7 +388,7 @@ botao.addEventListener("click", async () => {
         descricao: categoria,
         categoria: categoria,
         valor: valor,
-        tipo: "Despesa"
+        tipo: tipoFinal
       }
     ]);
 
