@@ -675,7 +675,7 @@ async function carregarSaldo() {
     );
   if (saldo <0) {
     saldoElemento.style.color=
-      "#c62828";
+      "red";
   } else {
     saldoElemento.style.color=
       "";
