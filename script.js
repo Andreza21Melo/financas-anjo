@@ -466,7 +466,7 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
 await carregarHistorico();
 await carregarSaldo();
   
-  alert("✅ Lançamento salvo!");
+  mostrarMensagem("✅ Lançamento salvo!");
 });
 
 // ======================
@@ -680,5 +680,23 @@ async function carregarSaldo() {
     saldoElemento.style.color=
       "";
   }
+
+  
+// ======================
+// MENSAGEM LANÇAMENTO SALVO
+// ======================
+
+  fuction mostrarMensagem(texto){
+    const msg=
+      document.getElementById("msg-lancamento");
+
+    msg.textContent = texto;
+    msg.style.opacity="1";
+
+    setTimeout(() => {
+      msg.style.opacity="0";
+  }, 2000);
+  }
+  
 
 }
