@@ -187,9 +187,43 @@ async function carregarSaldo() {
       despesas += Number(item.valor);
     }
 
+    if(item.tipo === "Transferência"){
+      transferencias += Number(item.valor);
+    }
+
   });
 
   const saldo = receitas - despesas;
+
+    document.getElementById("total-receitas")
+    .textContent =
+    receitas.toLocaleString(
+      "pt-BR",
+      {
+        style: "currency",
+        currency: "BRL"
+      }
+    );
+
+    document.getElementById("total-despesas")
+    .textContent =
+    despesas.toLocaleString(
+      "pt-BR",
+      {
+        style: "currency",
+        currency: "BRL"
+      }
+    );
+
+    document.getElementById("total-transferencias")
+    .textContent =
+    transferencias.toLocaleString(
+      "pt-BR",
+      {
+        style: "currency",
+        currency: "BRL"
+      }
+    );
 
   document.getElementById("saldo")
     .textContent =
