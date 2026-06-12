@@ -415,11 +415,11 @@ botao.addEventListener("click", async () => {
   const textoNormalizado =
     categoria.toLowerCase();
 
-  const categoriaEncontada =
+  const categoriaEncontrada =
     categoriasMap[textoNormalizado];
 
   let categoriaFinal = categoria
-  let tipoFinal = "Despesas";
+  let tipoFinal = "Despesa";
 
   if (categoriaEncontrada) {
 
@@ -435,8 +435,8 @@ botao.addEventListener("click", async () => {
     .insert([
       {
         data: new Date().toISOString().split("T")[0],
-        descricao: categoria,
-        categoria: categoria,
+        descricao: categoriaFinal,
+        categoria: categoriaFinal,
         valor: valor,
         tipo: tipoFinal
       }
