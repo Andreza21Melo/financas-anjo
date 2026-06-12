@@ -552,7 +552,7 @@ li.classList.add("item-historico");
     break;
 
  case "Renda Extra":
-    icone = "📈";
+    icone = "💵";
     break;
 
     case "Outros":
