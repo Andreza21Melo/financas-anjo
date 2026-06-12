@@ -43,6 +43,12 @@ const banco = window.supabase.createClient(
 const botao = document.querySelector(".btn-enviar");
 const entrada = document.getElementById("entrada");
 
+entrada.addEventListener("keypress", (event) => {
+  if(event.key === "Enter") {
+    botao.click();
+}
+});
+
 // ======================
 // CATEGORIAS INTELIGENTES
 // ======================
