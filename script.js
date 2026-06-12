@@ -164,6 +164,16 @@ const categoriasMap = {
     tipo: "Despesa"
   },
 
+    "conta de luz":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
+  "Conta de luz":{
+  categoria: "Luz",
+    tipo: "Despesa"
+  },
+
   "internet":{
   categoria: "Internet",
     tipo: "Despesa"
