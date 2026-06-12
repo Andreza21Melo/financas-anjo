@@ -499,7 +499,59 @@ async function carregarHistorico() {
 
 li.classList.add("item-historico");
 
- let icone = "";
+ let icone = "📌";
+
+    switch (item.categoria) {
+
+  case "Mercado":
+    icone = "🛒";
+    break;
+
+  case "Salário":
+    icone = "💰";
+    break;
+
+  case "Internet":
+    icone = "🌐";
+    break;
+
+  case "Saúde":
+    icone = "💊";
+    break;
+
+  case "Transporte":
+    icone = "🚗";
+    break;
+
+  case "Lazer":
+    icone = "🎉";
+    break;
+
+  case "Estudos":
+    icone = "📚";
+    break;
+
+  case "Cosméticos":
+    icone = "💄";
+    break;
+
+  case "Roupa/Calçado":
+    icone = "👕";
+    break;
+
+  case "Cartão de Crédito":
+    icone = "💳";
+    break;
+
+  case "Reserva de Emergência":
+    icone = "🛟";
+    break;
+
+  case "Investimentos":
+    icone = "📈";
+    break;
+
+    }
     
 
 li.innerHTML = `
