@@ -51,21 +51,21 @@ header p{
 
 .resumo{
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:10px;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
   margin-bottom:20px;
 }
 
 .card{
   background:white;
-  padding:12px;
-  border-radius:16px;
+  padding:10px;
+  border-radius:12px;
   text-align: center;
 }
 
 .card h3{
   font-size:0.85rem;
-  margin-bottom:6px;
+  margin-bottom:4px;
 }
 
 .card p{
