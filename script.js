@@ -499,9 +499,12 @@ async function carregarHistorico() {
 
 li.classList.add("item-historico");
 
+ let icone = "";
+    
+
 li.innerHTML = `
   <span class="historico-descricao">
-    ${item.descricao}
+    ${icone} ${item.descricao}
   </span>
 
   <span class="historico-valor">
