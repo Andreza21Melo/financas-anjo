@@ -483,7 +483,9 @@ await carregarSaldo();
 
   setTimeout(() => {
     toast.style.opacity = "0";
-  } 2000);
+  }, 2000);
+
+});
 
 // ======================
 // HISTÓRICO
