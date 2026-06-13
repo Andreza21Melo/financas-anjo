@@ -475,9 +475,15 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
   
 await carregarHistorico();
 await carregarSaldo();
-  
-  mostrarMensagem("✅ Lançamento salvo!");
-});
+
+  const toast =
+    document.getElementById("toast");
+
+  toast.style.opacity = "1";
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+  } 2000);
 
 // ======================
 // HISTÓRICO
@@ -690,23 +696,5 @@ async function carregarSaldo() {
     saldoElemento.style.color=
       "";
   }
-
-  
-// ======================
-// MENSAGEM LANÇAMENTO SALVO
-// ======================
-
-  fuction mostrarMensagem(texto){
-    const msg=
-      document.getElementById("msg-lancamento");
-
-    msg.textContent = texto;
-    msg.style.opacity="1";
-
-    setTimeout(() => {
-      msg.style.opacity="0";
-  }, 2000);
-  }
-  
 
 }
