@@ -231,3 +231,8 @@ li{
 .filtros-historico button:hover{
   background:#e5e5e5;
 }
+
+.filtro-ativo{
+  background:#333 !important;
+  color:white !important;
+}
