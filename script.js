@@ -42,6 +42,11 @@ const banco = window.supabase.createClient(
 
 const botao = document.querySelector(".btn-enviar");
 const entrada = document.getElementById("entrada");
+const filtroTodos = document.getElementById("filtro-todos");
+const filtroReceitas = document.getElementById("filtro-receitas");
+const filtroDespesas = document.getElementById("filtro-despesas");
+const filtroTransferencias = document.getElementById("filtro-trasnferencias");
+
 
 entrada.addEventListener("keypress", (event) => {
   if(event.key === "Enter") {
