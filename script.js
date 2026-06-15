@@ -738,6 +738,13 @@ li.innerHTML = `
   </button>
 `;
 
+li.addEventListener("click" , () => {
+
+  li.classList.toggle(
+    "mostrar-lixeira"
+  );
+});    
+
 lista.appendChild(li);
     
   });
