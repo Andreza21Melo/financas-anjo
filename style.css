@@ -213,8 +213,8 @@ li{
 
 .filtros-historico{
   display:flex;
-  gap: box;
-  margin: 12px 0 16px o;
+  gap: 8px;
+  margin: 12px 0 16px 0;
 }
 
 .filtros-historico button {
