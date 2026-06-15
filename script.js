@@ -820,23 +820,6 @@ btnExcluir.addEventListener(
 modalExcluir.classList.add(
   "ativo"
 );
-
-return;
-    const { error } =
-      await banco
-      .from("movimentacoes")
-      .delete()
-      .eq("id", item.id);
-
-    if (error) {
-      console.error(error);
-      alert("Erro ao excluir.");
-      return;
-    }
-
-    await carregarHistorico();
-    await carregarSaldo();
-
   }
 );   
 
