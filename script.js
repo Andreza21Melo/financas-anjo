@@ -123,6 +123,42 @@ const btnMesProximo =
     "mes-proximo"
   );
 
+btnMesAnterior.addEventListener(
+  "click",
+  () => {
+
+    mesSelecionado--;
+
+    if (mesSelecionado < 0) {
+
+      mesSelecionado = 11;
+      anoSelecionado--;
+
+    }
+
+    atualizarMesTela();
+
+  }
+);
+
+  btnMesProximo.addEventListener(
+  "click",
+  () => {
+
+    mesSelecionado++;
+
+    if (mesSelecionado > 11) {
+
+      mesSelecionado = 0;
+      anoSelecionado++;
+
+    }
+
+    atualizarMesTela();
+
+  }
+);
+
 // ======================
 // CATEGORIAS INTELIGENTES
 // ======================
@@ -918,40 +954,6 @@ async function carregarSaldo() {
       "";
   }
 
-  btnMesAnterior.addEventListener(
-  "click",
-  () => {
-
-    mesSelecionado--;
-
-    if (mesSelecionado < 0) {
-
-      mesSelecionado = 11;
-      anoSelecionado--;
-
-    }
-
-    atualizarMesTela();
-
-  }
-);
-
-  btnMesProximo.addEventListener(
-  "click",
-  () => {
-
-    mesSelecionado++;
-
-    if (mesSelecionado > 11) {
-
-      mesSelecionado = 0;
-      anoSelecionado++;
-
-    }
-
-    atualizarMesTela();
-
-  }
-);
+  
 
 }
