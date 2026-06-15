@@ -125,6 +125,16 @@ entrada.addEventListener("keypress", (event) => {
 }
 });
 
+const btnMesAnterior =
+  document.getElementById(
+    "mes-anterior"
+  );
+
+const btnMesProximo =
+  document.getElementById(
+    "mes-proximo"
+  );
+
 // ======================
 // CATEGORIAS INTELIGENTES
 // ======================
