@@ -433,6 +433,30 @@ filtroTransferencias.addEventListener(
   () => carregarHistorico("Transferência")
 );
 
+function atualizarFiltroAtivo(botaoAtivo){
+
+  filtroTodos.classList.remove(
+    "filtro-ativo"
+  );
+
+  filtroReceitas.classList.remove(
+    "filtro-ativo"
+  );
+
+  filtroDespesas.classList.remove(
+    "filtro-ativo"
+  );
+
+  filtroTransferencias.classList.remove(
+    "filtro-ativo"
+  );
+
+  botaoAtivo.classList.add(
+    "filtro-ativo"
+  );
+
+}
+
 // ======================
 // NOVO LANÇAMENTO
 // ======================
