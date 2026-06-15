@@ -428,7 +428,15 @@ filtroTodos.addEventListener(
 
 filtroReceitas.addEventListener(
   "click",
-  () => carregarHistorico("Receita")
+  () => {
+
+    carregarHistorico("Receita");
+
+    atualizarFiltroAtivo(
+      filtroReceitas
+    );
+
+  }
 );
 
 filtroDespesas.addEventListener(
