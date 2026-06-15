@@ -769,13 +769,13 @@ btnExcluir.addEventListener(
 
     event.stopPropagation();
 
-    const confirmar =
-      confirm(
-        "Deseja excluir este lançamento?"
-      );
+    idParaExcluir = item.id;
 
-    if (!confirmar) return;
+modalExcluir.classList.add(
+  "ativo"
+);
 
+return;
     const { error } =
       await banco
       .from("movimentacoes")
