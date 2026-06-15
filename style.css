@@ -206,3 +206,28 @@ li{
   pointer-events: none;
   z-index: 9999;
 }
+
+/* ======================
+ FILTROS HISTORICO
+====================== */
+
+.filtros-historico{
+  display:flex;
+  gap: box;
+  margin: 12px 0 16px o;
+}
+
+.filtros-historico button {
+  flex:1;
+  margin:0;
+  padding:8px;
+  font-size:0.75rem;
+  background:#f2f2f2;
+  color:#555;
+  border:none;
+  border-radius:20px
+}
+
+.filtros-historico button:hover{
+  background:#e5e5e5;
+}
