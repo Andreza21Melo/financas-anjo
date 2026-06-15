@@ -23,8 +23,16 @@ const hoje = new Date();
 let mesSelecionado = hoje.getMonth();
 let anoSelecionado = hoje.getFullYear();
 
-document.getElementById("mesAtual").textContent =
-  `${meses[hoje.getMonth()]} ${hoje.getFullYear()}`;
+function atualizarMesTela() {
+document.getElementById(
+    "mesAtual"
+) textContent =
+  '${meses[mesSelecionado]}
+  ${anoSelecionado}' ;
+  
+}
+
+atualizarMesTela();
 
 // ======================
 // SUPABASE
