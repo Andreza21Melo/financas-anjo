@@ -20,6 +20,8 @@ const meses = [
 ];
 
 const hoje = new Date();
+let mesSelecionado = hoje.getMonth();
+let anoSelecionado = hoje.getFullYear();
 
 document.getElementById("mesAtual").textContent =
   `${meses[hoje.getMonth()]} ${hoje.getFullYear()}`;
