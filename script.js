@@ -413,6 +413,26 @@ testarConexao();
 carregarHistorico();
 carregarSaldo();
 
+filtroTodos.addEventListener(
+  "click",
+  () => carregarHistorico("Todos")
+);
+
+filtroReceitas.addEventListener(
+  "click",
+  () => carregarHistorico("Receita")
+);
+
+filtroDespesas.addEventListener(
+  "click",
+  () => carregarHistorico("Despesa")
+);
+
+filtroTransferencias.addEventListener(
+  "click",
+  () => carregarHistorico("Transferência")
+);
+
 // ======================
 // NOVO LANÇAMENTO
 // ======================
