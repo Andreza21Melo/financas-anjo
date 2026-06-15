@@ -46,7 +46,22 @@ const filtroTodos = document.getElementById("filtro-todos");
 const filtroReceitas = document.getElementById("filtro-receitas");
 const filtroDespesas = document.getElementById("filtro-despesas");
 const filtroTransferencias = document.getElementById("filtro-transferencias");
+const modalExcluir =
+  document.getElementById(
+    "modal-excluir"
+  );
 
+const btnCancelar =
+  document.getElementById(
+    "btn-cancelar"
+  );
+
+const btnConfirmarExclusao =
+  document.getElementById(
+    "btn-confirmar-exclusao"
+  );
+
+let idParaExcluir = null;
 
 entrada.addEventListener("keypress", (event) => {
   if(event.key === "Enter") {
