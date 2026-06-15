@@ -491,15 +491,44 @@ await carregarSaldo();
 // HISTÓRICO
 // ======================
 
-async function carregarHistorico() {
+async function carregarHistorico(
+  filtro= "Todos"
+) {
 
   const lista = document.getElementById(
     "lista-lancamentos"
   );
 
-  const { data, error } = await banco
+  let consulta = banco
     .from("movimentacoes")
     .select("*")
+
+    if (filtro === "Receita"){
+
+      consulta = consulta.eq(
+        "tipo",
+        "Receita"
+      );
+    }
+
+    if (filtro === "Despesa") {
+
+      consulta = consulta.eq(
+        "tipo".
+        "Despesa"
+      );
+    }  
+
+      if filtro === "Transferência") {
+
+        consulta = consulta.eq(
+          "tipo",
+          "Transferência"
+        );
+      }
+
+  const {data, error} = 
+    await consulta
     .order("data", { ascending: false })
     .limit(10);
 
