@@ -26,9 +26,9 @@ let anoSelecionado = hoje.getFullYear();
 function atualizarMesTela() {
 document.getElementById(
     "mesAtual"
-) textContent =
-  '${meses[mesSelecionado]}
-  ${anoSelecionado}' ;
+) .textContent =
+  ´${meses[mesSelecionado]}
+  ${anoSelecionado}´ ;
   
 }
 
@@ -51,49 +51,39 @@ const banco = window.supabase.createClient(
 // ======================
 
 const botao = document.querySelector(".btn-enviar");
+
 const entrada = document.getElementById("entrada");
+
 const filtroTodos = document.getElementById("filtro-todos");
+
 const filtroReceitas = document.getElementById("filtro-receitas");
+
 const filtroDespesas = document.getElementById("filtro-despesas");
+
 const filtroTransferencias = document.getElementById("filtro-transferencias");
-const modalExcluir =
-  document.getElementById(
-    "modal-excluir"
-  );
 
-const btnCancelar =
-  document.getElementById(
-    "btn-cancelar"
-  );
+const modalExcluir = document.getElementById("modal-excluir");
 
-const btnConfirmarExclusao =
-  document.getElementById(
-    "btn-confirmar-exclusao"
-  );
+const btnCancelar = document.getElementById("btn-cancelar");
+
+const btnConfirmarExclusao = document.getElementById("btn-confirmar-exclusao");
 
 let idParaExcluir = null;
 
- btnCancelar.addEventListener(
-  "click",
-  () => {
+ btnCancelar.addEventListener("click", () => {
 
-    modalExcluir.classList.remove(
-      "ativo"
-    );
+    modalExcluir.classList.remove("ativo");
 
     idParaExcluir = null;
 
   }
 );
 
-btnConfirmarExclusao.addEventListener(
-  "click",
-  async () => {
+btnConfirmarExclusao.addEventListener("click",async () => {
 
     if (!idParaExcluir) return;
 
-    const { error } =
-      await banco
+    const { error } =await banco
       .from("movimentacoes")
       .delete()
       .eq(
@@ -107,9 +97,7 @@ btnConfirmarExclusao.addEventListener(
       return;
     }
 
-    modalExcluir.classList.remove(
-      "ativo"
-    );
+    modalExcluir.classList.remove("ativo");
 
     idParaExcluir = null;
 
