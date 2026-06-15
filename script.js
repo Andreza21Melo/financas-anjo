@@ -544,7 +544,7 @@ async function carregarHistorico(
       );
     }  
 
-      if filtro === "Transferência") {
+      if (filtro === "Transferência") {
 
         consulta = consulta.eq(
           "tipo",
