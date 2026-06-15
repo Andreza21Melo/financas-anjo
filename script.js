@@ -712,19 +712,30 @@ li.classList.add("item-historico");
     
 
 li.innerHTML = `
-  <span class="historico-descricao">
-    ${icone} ${item.descricao}
-  </span>
+  <div class="historico-info">
 
-  <span class="historico-valor">
-    ${Number(item.valor).toLocaleString(
-      "pt-BR",
-      {
-        style: "currency",
-        currency: "BRL"
-      }
-    )}
-  </span>
+    <span class="historico-descricao">
+      ${icone} ${item.descricao}
+    </span>
+
+    <span class="historico-valor">
+      ${Number(item.valor).toLocaleString(
+        "pt-BR",
+        {
+          style: "currency",
+          currency: "BRL"
+        }
+      )}
+    </span>
+
+  </div>
+
+  <button
+    class="btn-excluir"
+    data-id="${item.id}"
+  >
+    🗑️
+  </button>
 `;
 
 lista.appendChild(li);
