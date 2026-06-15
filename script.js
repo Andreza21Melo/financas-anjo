@@ -413,6 +413,10 @@ testarConexao();
 carregarHistorico();
 carregarSaldo();
 
+atualizarFiltroAtivo(
+  filtroTodos
+);
+
 filtroTodos.addEventListener(
   "click",
   () => {
