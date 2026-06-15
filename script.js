@@ -539,7 +539,7 @@ async function carregarHistorico(
     if (filtro === "Despesa") {
 
       consulta = consulta.eq(
-        "tipo".
+        "tipo",
         "Despesa"
       );
     }  
