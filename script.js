@@ -24,12 +24,8 @@ let mesSelecionado = hoje.getMonth();
 let anoSelecionado = hoje.getFullYear();
 
 function atualizarMesTela() {
-document.getElementById(
-    "mesAtual"
-) .textContent =
-  ´${meses[mesSelecionado]}
-  ${anoSelecionado}´ ;
-  
+  document.getElementById("mesAtual").textContent =
+    `${meses[mesSelecionado]} ${anoSelecionado}`;
 }
 
 atualizarMesTela();
