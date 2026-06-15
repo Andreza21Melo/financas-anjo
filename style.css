@@ -236,3 +236,30 @@ li{
   background:#333 !important;
   color:white !important;
 }
+
+.historico-info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+
+.btn-excluir{
+  display:none;
+
+  margin-left:10px;
+
+  width:auto;
+  padding:4px 8px;
+
+  background:none;
+  border:none;
+
+  cursor:pointer;
+
+  font-size:1rem;
+}
+
+.mostrar-lixeira .btn-excluir{
+  display:block;
+}
