@@ -63,6 +63,52 @@ const btnConfirmarExclusao =
 
 let idParaExcluir = null;
 
+ btnCancelar.addEventListener(
+  "click",
+  () => {
+
+    modalExcluir.classList.remove(
+      "ativo"
+    );
+
+    idParaExcluir = null;
+
+  }
+);
+
+btnConfirmarExclusao.addEventListener(
+  "click",
+  async () => {
+
+    if (!idParaExcluir) return;
+
+    const { error } =
+      await banco
+      .from("movimentacoes")
+      .delete()
+      .eq(
+        "id",
+        idParaExcluir
+      );
+
+    if (error) {
+      console.error(error);
+      alert("Erro ao excluir.");
+      return;
+    }
+
+    modalExcluir.classList.remove(
+      "ativo"
+    );
+
+    idParaExcluir = null;
+
+    await carregarHistorico();
+    await carregarSaldo();
+
+  }
+);
+
 entrada.addEventListener("keypress", (event) => {
   if(event.key === "Enter") {
     botao.click();
@@ -880,51 +926,5 @@ async function carregarSaldo() {
     saldoElemento.style.color=
       "";
   }
-
-  btnCancelar.addEventListener(
-  "click",
-  () => {
-
-    modalExcluir.classList.remove(
-      "ativo"
-    );
-
-    idParaExcluir = null;
-
-  }
-);
-
-btnConfirmarExclusao.addEventListener(
-  "click",
-  async () => {
-
-    if (!idParaExcluir) return;
-
-    const { error } =
-      await banco
-      .from("movimentacoes")
-      .delete()
-      .eq(
-        "id",
-        idParaExcluir
-      );
-
-    if (error) {
-      console.error(error);
-      alert("Erro ao excluir.");
-      return;
-    }
-
-    modalExcluir.classList.remove(
-      "ativo"
-    );
-
-    idParaExcluir = null;
-
-    await carregarHistorico();
-    await carregarSaldo();
-
-  }
-);
 
 }
