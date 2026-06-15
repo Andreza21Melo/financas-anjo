@@ -415,7 +415,15 @@ carregarSaldo();
 
 filtroTodos.addEventListener(
   "click",
-  () => carregarHistorico("Todos")
+  () => {
+
+    carregarHistorico("Todos");
+
+    atualizarFiltroAtivo(
+      filtroTodos
+    );
+
+  }
 );
 
 filtroReceitas.addEventListener(
