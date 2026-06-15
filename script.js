@@ -45,7 +45,7 @@ const entrada = document.getElementById("entrada");
 const filtroTodos = document.getElementById("filtro-todos");
 const filtroReceitas = document.getElementById("filtro-receitas");
 const filtroDespesas = document.getElementById("filtro-despesas");
-const filtroTransferencias = document.getElementById("filtro-trasnferencias");
+const filtroTransferencias = document.getElementById("filtro-transferencias");
 
 
 entrada.addEventListener("keypress", (event) => {
