@@ -745,11 +745,7 @@ li.addEventListener("click" , () => {
   );
 });    
 
-lista.appendChild(li);
-    
-  });
-
-  const btnExcluir =
+ const btnExcluir =
   li.querySelector(".btn-excluir");
 
 btnExcluir.addEventListener(
@@ -781,8 +777,11 @@ btnExcluir.addEventListener(
     await carregarSaldo();
 
   }
-);
+);   
 
+lista.appendChild(li);
+    
+  });
 }
 
 async function carregarSaldo() {
