@@ -441,12 +441,30 @@ filtroReceitas.addEventListener(
 
 filtroDespesas.addEventListener(
   "click",
-  () => carregarHistorico("Despesa")
+  () => {
+
+    carregarHistorico("Despesa");
+
+    atualizarFiltroAtivo(
+      filtroDespesas
+    );
+
+  }
 );
 
 filtroTransferencias.addEventListener(
   "click",
-  () => carregarHistorico("Transferência")
+  () => {
+
+    carregarHistorico(
+      "Transferência"
+    );
+
+    atualizarFiltroAtivo(
+      filtroTransferencias
+    );
+
+  }
 );
 
 function atualizarFiltroAtivo(botaoAtivo){
