@@ -876,9 +876,16 @@ lista.appendChild(li);
 
 async function carregarSaldo() {
 
+  const {
+    inicioMes,
+    inicioProximoMes
+  } = obterPeriodoMes();
+
   const { data, error } = await banco
     .from("movimentacoes")
-    .select("*");
+    .select("*")
+  .gte("data", inicioMes)
+  .lt("data", inicioProximoMes);
 
   if (error) {
     console.error(error);
