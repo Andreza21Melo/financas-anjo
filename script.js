@@ -689,7 +689,7 @@ async function carregarHistorico(
     "lista-lancamentos"
   );
 
-  consta {
+  const {
     inicioMes, inicioProximoMes
   } = obterPeriodoMes();
 
