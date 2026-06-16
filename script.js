@@ -690,7 +690,7 @@ botao.addEventListener("click", async () => {
     .from("movimentacoes")
     .insert([
       {
-        data: obterDataLancamento()
+        data: obterDataLancamento(),
         descricao: categoriaFinal,
         categoria: categoriaFinal,
         valor: valor,
