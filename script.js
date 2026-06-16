@@ -697,7 +697,7 @@ botao.addEventListener("click", async () => {
         tipo: tipoFinal,
 
         status: "Confirmado",
-        observações:""
+        observacoes:""
       }
     ]);
 
