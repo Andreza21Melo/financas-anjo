@@ -739,6 +739,7 @@ await carregarHistorico();
 await carregarSaldo();
 
 mostrarToast("✅Lançamento salvo.");
+});
 
 // ======================
 // HISTÓRICO
