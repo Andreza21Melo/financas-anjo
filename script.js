@@ -132,32 +132,6 @@ btnMesAnterior.addEventListener(
 
     atualizarMesTela();
 
-    function obterPeriodoMes(){
-
-  const inicioMes =
-    `${anoSelecionado}-${String(
-      mesSelecionado + 1
-    ).padStart(2, "0")}-01`;
-
-  let proximoMes = mesSelecionado + 2;
-  let proximoAno = anoSelecionado;
-
-  if (proximoMes > 12) {
-    proximoMes = 1;
-    proximoAno++;
-  }
-
-  const inicioProximoMes =
-    `${proximoAno}-${String(
-      proximoMes
-    ).padStart(2, "0")}-01`;
-
-  return {
-    inicioMes,
-    inicioProximoMes
-  };
-  }
-
     await carregarHistorico();
     await carregarSaldo();
 
