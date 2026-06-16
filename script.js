@@ -652,6 +652,16 @@ function atualizarFiltroAtivo(botaoAtivo){
 
 }
 
+function mostrarToast(mensagem){
+
+  const toast= document.getElementById("toast");
+  toast.textContent=mensagem;
+  toast.style.opacity="1"
+  setTimeout(() => {
+    toast.style.opacity="0";
+  }, 2000);
+}
+
 // ======================
 // NOVO LANÇAMENTO
 // ======================
