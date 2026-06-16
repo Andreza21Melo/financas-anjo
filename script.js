@@ -667,7 +667,9 @@ botao.addEventListener("click", async () => {
     .from("movimentacoes")
     .insert([
       {
-        data: new Date().toISOString().split("T")[0],
+        data: `${anoSelecionado}-${String(
+  mesSelecionado + 1
+).padStart(2, "0")}-01`
         descricao: categoriaFinal,
         categoria: categoriaFinal,
         valor: valor,
