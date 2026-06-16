@@ -54,6 +54,7 @@ atualizarMesTela();
     inicioMes,
     inicioProximoMes
   };
+    }
 
 // ======================
 // SUPABASE
