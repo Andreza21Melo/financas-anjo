@@ -690,9 +690,7 @@ botao.addEventListener("click", async () => {
     .from("movimentacoes")
     .insert([
       {
-        data: `${anoSelecionado}-${String(
-  mesSelecionado + 1
-).padStart(2, "0")}-01`,
+        data: obterDataLancamento()
         descricao: categoriaFinal,
         categoria: categoriaFinal,
         valor: valor,
