@@ -121,36 +121,38 @@ const btnMesProximo =
 
 btnMesAnterior.addEventListener(
   "click",
-  () => {
+  async () => {
 
     mesSelecionado--;
 
     if (mesSelecionado < 0) {
-
       mesSelecionado = 11;
       anoSelecionado--;
-
     }
 
     atualizarMesTela();
+
+    await carregarHistorico();
+    await carregarSaldo();
 
   }
 );
 
   btnMesProximo.addEventListener(
   "click",
-  () => {
+  async () => {
 
     mesSelecionado++;
 
     if (mesSelecionado > 11) {
-
       mesSelecionado = 0;
       anoSelecionado++;
-
     }
 
     atualizarMesTela();
+
+    await carregarHistorico();
+    await carregarSaldo();
 
   }
 );
