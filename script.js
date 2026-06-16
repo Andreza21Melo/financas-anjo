@@ -477,17 +477,22 @@ const categoriasMap = {
   },
 
   "Dívida":{
-  categoria: "Cartão de crédito",
+  categoria: "Cartão de Crédito",
   tipo: "Despesa"
   },
 
   "Empréstimo":{
-  categoria: "Cartão de crédito",
+  categoria: "Cartão de Crédito",
   tipo: "Despesa"
   },
 
   "Fatura":{
-  categoria: "Cartão de crédito",
+  categoria: "Cartão de Crédito",
+  tipo: "Despesa"
+  },
+
+   "fatura":{
+  categoria: "Cartão de Crédito",
   tipo: "Despesa"
   },
 
