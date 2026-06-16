@@ -671,7 +671,7 @@ botao.addEventListener("click", async () => {
   const texto = entrada.value.trim();
 
   if (!texto) {
-    mostrarToast("⚠️Digite um valor.");
+    mostrarToast("⚠️Digite um valor");
     return;
   }
 
@@ -682,7 +682,7 @@ botao.addEventListener("click", async () => {
   );
 
   if (isNaN(valor)) {
-    mostrarToast("⚠️Digite um valor.");
+    mostrarToast("⚠️Digite um valor");
   return;
 }
 
