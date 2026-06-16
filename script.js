@@ -56,6 +56,29 @@ atualizarMesTela();
   };
     }
 
+function obterDataLancamento() {
+
+  const hoje = new Date().getDate();
+
+  const ultimoDiaMes = new Date(
+    anoSelecionado,
+    mesSelecionado + 1,
+    0
+  ).getDate();
+
+  const dia = Math.min(
+    hoje,
+    ultimoDiaMes
+  );
+
+  return `${anoSelecionado}-${String(
+    mesSelecionado + 1
+  ).padStart(2, "0")}-${String(
+    dia
+  ).padStart(2, "0")}`;
+
+}
+
 // ======================
 // SUPABASE
 // ======================
