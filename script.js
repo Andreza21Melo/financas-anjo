@@ -669,7 +669,7 @@ botao.addEventListener("click", async () => {
       {
         data: `${anoSelecionado}-${String(
   mesSelecionado + 1
-).padStart(2, "0")}-01`
+).padStart(2, "0")}-01`,
         descricao: categoriaFinal,
         categoria: categoriaFinal,
         valor: valor,
