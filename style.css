@@ -353,3 +353,31 @@ li{
   }
 
 }
+
+.controle-mes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.controle-mes buttom{
+  width: 42px;
+  height: 42px;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#mesAtual{
+  margin:0;
+  min-width: 160px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
