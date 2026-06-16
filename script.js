@@ -132,6 +132,8 @@ btnMesAnterior.addEventListener(
 
     atualizarMesTela();
 
+    function obterPeriodoMes(){
+
   const inicioMes =
     `${anoSelecionado}-${String(
       mesSelecionado + 1
