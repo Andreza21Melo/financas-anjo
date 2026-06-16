@@ -682,7 +682,7 @@ botao.addEventListener("click", async () => {
   );
 
   if (isNaN(valor)) {
-    mostrarToast("⚠️Digite um valor."
+    mostrarToast("⚠️Digite um valor.")
   };
   return;
 }
@@ -740,8 +740,6 @@ await carregarHistorico();
 await carregarSaldo();
 
 mostrarToast("✅Lançamento salvo.");
-
-});
 
 // ======================
 // HISTÓRICO
