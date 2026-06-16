@@ -671,7 +671,7 @@ botao.addEventListener("click", async () => {
   const texto = entrada.value.trim();
 
   if (!texto) {
-    alert("Digite algo.");
+    mostrarToast("⚠️Digite um valor.");
     return;
   }
 
@@ -680,6 +680,12 @@ botao.addEventListener("click", async () => {
   const valor = Number(
     partes.pop().replace(",", ".")
   );
+
+  if (isNaN(valor)) {
+    mostrarToast("⚠️Digite um valor."
+  };
+  return;
+}
 
   const categoria = partes.join(" ");
 
@@ -733,14 +739,7 @@ console.log("Início da chave:", SUPABASE_KEY.substring(0, 20));
 await carregarHistorico();
 await carregarSaldo();
 
-  const toast =
-    document.getElementById("toast");
-
-  toast.style.opacity = "1";
-
-  setTimeout(() => {
-    toast.style.opacity = "0";
-  }, 2000);
+mostrarToast("✅Lançamento salvo.");
 
 });
 
