@@ -687,10 +687,16 @@ async function carregarHistorico(
     "lista-lancamentos"
   );
 
+  consta {
+    inicioMes, inicioProximoMes
+  } = obterPeriodoMes();
+
   let consulta = banco
     .from("movimentacoes")
     .select("*")
-
+  .gte("data", inicioMes)
+  .lt("data", inicioProximoMes);
+  
     if (filtro === "Receita"){
 
       consulta = consulta.eq(
